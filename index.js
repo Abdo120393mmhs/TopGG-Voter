@@ -12,11 +12,10 @@ const vote = async () => {
 	await page.setCookie({ name: 'connect.sid', value: COOKIE, domain: 'top.gg', path: '/' });
 	await page.goto(`https://top.gg/bot/${BOT_ID}/vote`);
 	await page.click('#votingvoted');
-	await page.close();
-	await browser.close();
 
 	console.log('Successfully voted');
 
+	setTimeout(() => browser.close(), 1000);
 	setTimeout(vote, 1000 * 60 * 60 * 12);
 	console.log('Waiting 12 hours');
 };
