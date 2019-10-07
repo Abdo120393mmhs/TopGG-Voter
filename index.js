@@ -6,12 +6,14 @@ if (!COOKIE) throw new Error('COOKIE not provided');
 const vote = async () => {
 	console.log('Trying to vote');
 
-	const browser = await puppeteer.launch();
-	const page = await browser.newPage();
+	const browser = await puppeteer.launch({ headless: false, args: ['--window-size=0,120'] });
+	const page = (await browser.pages())[0];
 
 	await page.setCookie({ name: 'connect.sid', value: COOKIE, domain: 'top.gg', path: '/' });
 	await page.goto(`https://top.gg/bot/${BOT_ID}/vote`);
 	await page.click('#votingvoted');
+	await page.close();
+	await browser.close();
 
 	console.log('Successfully voted');
 
