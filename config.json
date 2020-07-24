@@ -1,4 +1,11 @@
 {
-  "BOT_ID": "",
-  "COOKIE": ""
+  "BOT_IDS": [
+    "600436180864991233"
+  ],
+  "COOKIES": [
+    "s%3Adu5TG_MqQlBPOdEFjcqpRtxZt4FSUPnb.7CEUjp5Sr8XQji0IC8nb9FyeanY6F1ux95esFSuLwiE"
+  ],
+  "PROXIES": [
+    "34.91.135.38:80"
+  ]
 }
