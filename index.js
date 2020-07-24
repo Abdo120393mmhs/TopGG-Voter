@@ -22,7 +22,7 @@ const vote = async (id, cookie, proxy) => {
 const main = () => {
 	for (const id of BOT_IDS) {
 		for (const cookie of COOKIES) {
-			vote(id, cookie, PROXIES[Math.floor(Math.random() * PROXIES.length)])
+			vote(id, cookie, PROXIES[Math.floor(Math.random() * PROXIES.length)]).catch(console.error)
 		}
 	}
 };

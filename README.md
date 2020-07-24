@@ -11,6 +11,6 @@ Simple puppeteer voter for Top.gg
 5. Run `npm start`
 
 ## Variables
-`BOT_IDS` An array of Top.GG custom slugs or bot id's
-`COOKIES` An array of Top.GG cookies used to authenticate
-`PROXIES` An array of proxies to use
+`BOT_IDS` An array of Top.GG custom slugs or bot id's  
+`COOKIES` An array of Top.GG cookies used to authenticate  
+`PROXIES` An array of proxies to use  
